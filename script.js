@@ -58,10 +58,10 @@ for (let j = 0; j < requestBtn.length; j++) {
   for (let i = 0; i < footerLink.length; i++) {
     let footerValue = footerLink[i]
     footerValue.addEventListener('click', () => {
-      footerValue.classList.contains('activeFooter') ? footerValue.classList.remove('activeFooter') : turnOffPrev(); footerValue.classList.add('activeFooter');
+      footerValue.classList.contains('activeFooter') ? footerValue.classList.remove('activeFooter') : turnPrev(); footerValue.classList.add('activeFooter');
     })
   }
-  function turnOffPrev() {
+  function turnPrev() {
     const prevBut = document.querySelector('.activeFooter');
     if (prevBut) {
       prevBut.classList.remove('activeFooter')

@@ -310,12 +310,17 @@ a {
   row-gap: 40px;
   align-items: center;
 }
-.footer-logo img{
-  background-color: var(--color-white);
+.footer-logo .img-2 {
+  filter: hue-rotate(269deg) brightness(354%) saturate(200%);
+  cursor: pointer;
 }
 .social-media {
   display: grid;
   grid-template-columns: repeat(5, 30px);
+}
+.social-media a img:hover {
+  width: 25px;
+  height: 25px;
 }
 .footer-menu ul{
   display: grid;
