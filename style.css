@@ -266,7 +266,7 @@ a {
   letter-spacing: .5px;
   padding: 50px 30px 0;
   background-color: var(--color-white);
-  box-shadow: 1px 3px 40px 1px #2f2f2f30;
+  box-shadow: 0px 30px 20px 10px #d8d6d640;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   transition: var(--transition);
