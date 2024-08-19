@@ -39,10 +39,10 @@ if(navClose){
 
 
 // LASTEST ARTICLES TOGGLE 
-const blogCard = document.querySelectorAll('.blog-text') 
-blogCard.forEach(blogCard => {
-  blogCard.addEventListener('click', function() {
-    blogCard.classList.toggle('cardOpened');
+const articlesCard = document.querySelectorAll('.articles-text') 
+articlesCard.forEach(articlesCard => {
+  articlesCard.addEventListener('click', function() {
+    articlesCard.classList.toggle('cardOpened');
   })
 })
 
