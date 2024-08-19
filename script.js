@@ -1,5 +1,4 @@
 // ACTIVE NAV-LINKS
-
 let navLink = document.querySelectorAll('.nav-link');
   for (let i = 0; i < navLink.length; i++) {
     let navValue = navLink[i]
@@ -37,6 +36,15 @@ if(navClose){
     navClose.style.display = 'none'
   })
 }
+
+
+// LASTEST ARTICLES TOGGLE 
+const blogCard = document.querySelectorAll('.blog-text') 
+blogCard.forEach(blogCard => {
+  blogCard.addEventListener('click', function() {
+    blogCard.classList.toggle('cardOpened');
+  })
+})
 
 
 // REQUEST INVITE BUTTON

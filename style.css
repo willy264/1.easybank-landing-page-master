@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: cursive;
+  font-family: sans-serif;
   background-color: var(--color-white);
 }
 
@@ -223,7 +223,7 @@ a {
 
 /* --------------- BLOG CONTAINER ---------------- */
 .blog-container {
-  background-color: #d8d8d818;
+  background-color: #d8d8d800;
   height: fit-content;
   grid-area: blog;
   display: grid;
@@ -237,8 +237,8 @@ a {
   padding-top: 20px;
 }
 .blog-top p {
-  font-size: 30px;
-  font-weight: lighter;
+  font-size: 35px;
+  font-weight: 500;
 }
 .blog-bottom {
   height: fit-content;
@@ -264,21 +264,24 @@ a {
   object-fit: cover;
 }
 .blog-text {
-  height: 250px;
-  padding: 50px 20px 0;
+  height: fit-content;
+  letter-spacing: .5px;
+  padding: 50px 30px 0;
   background-color: var(--color-white);
-  box-shadow: 0 25px 20px -20px #2f2f2f1f;
+  box-shadow: 1px 3px 40px 1px #2f2f2f30;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  transition: var(--transition);
 }
 .blog-text .first-blog {
   font-size: 10px;
   color: var(--text-color);
 }
 .blog-text .second-blog {
-  font-size: 16px;
-  padding: 12px 0;
+  font-size: 20px;
+  padding: 20px 0 30px;
   cursor: pointer;
+  font-weight: 500;
 }
 .blog-text .second-blog:hover {
   color: var(--color-success);
@@ -286,6 +289,16 @@ a {
 .blog-text .third-blog {
   color: var(--text-color);  
   font-size: 14px;
+  display: none;
+  line-height: 1.5;
+  transition: var(--transition);
+}
+.blog-text.cardOpened {
+  height: 250px;
+}
+.blog-text.cardOpened .third-blog {
+  display: block;
+  transition: var(--transition);
 }
 
 
@@ -453,7 +466,6 @@ a {
     width: 90%;
     height: 8px;
     transform: rotateZ(90deg);
-    transition: all 3s ease;
   }
   .menu-button {
     display: block;
@@ -513,10 +525,13 @@ a {
     padding-bottom: 20px;
   }
   .blog-card {
-    grid-template-rows: 180px 200px;
+    grid-template-rows: 180px .5fr;
   }
   .blog-bottom {
     row-gap: 20px;
+  }
+  .blog-text.cardOpened {
+    height: 300px;
   }
 
 
@@ -546,7 +561,9 @@ a {
     border-radius: 10px;
     left: 0;
     width: 100%;
-    /* top: -400px; */
+  }
+  .nav-link.active::before {
+    left: -200px;
   }
   .nav-container .invite-link {
     display: none;
@@ -572,7 +589,7 @@ a {
   }
   .home-left .left-h2 {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 400;
   }
   .home-right {
     grid-column: 2 / 4;
@@ -614,7 +631,13 @@ a {
   }
   .blog-card {
     margin-bottom: 50px;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 180px .5fr;
+  }
+  .blog-top p {
+    font-weight: 500;
+  }
+  .blog-text.cardOpened {
+    height: 350px;
   }
 
 
