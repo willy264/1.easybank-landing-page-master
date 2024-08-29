@@ -402,7 +402,7 @@ a {
   }
   .articles-bottom {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 500px);
+    grid-template-rows: repeat(2, .5fr);
     justify-items: center;
   }
   .articles-card {
@@ -524,13 +524,15 @@ a {
     padding-bottom: 20px;
   }
   .articles-card {
-    grid-template-rows: 180px .5fr;
+    grid-template-rows: 150px .5fr;
+    margin-bottom: 50px;
   }
   .articles-bottom {
     row-gap: 20px;
+
   }
   .articles-text.cardOpened {
-    height: 300px;
+    height: fit-content;
   }
 
 
